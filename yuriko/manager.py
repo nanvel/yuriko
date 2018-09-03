@@ -34,7 +34,8 @@ class NotesManager:
 
     def save(self):
         with open(self.path, 'w', encoding='utf-8') as f:
-            for k, v in self.notes.items():
+            for k in sorted(self.notes.keys()):
+                v = self.notes[k]
                 f.write('{}:{}\n'.format(k, v))
 
     @classmethod

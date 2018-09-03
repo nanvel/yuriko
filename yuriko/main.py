@@ -30,17 +30,14 @@ def main():
         matches = manager.search(prefix=q)
         for m in matches:
             print("- {}".format(m))
-    elif command == 'edit':
+    elif command == 'open':
         key = arguments[0]
         initial = manager.get(key=key)
         value = editor(initial)
-        manager.edit(key=key, value=value)
-    elif command == 'get':
-        key = arguments[0]
-        value = manager.get(key)
-        print('*{}*'.format(value))
+        if value != initial:
+            manager.edit(key=key, value=value)
     elif command == 'del':
         key = arguments[0]
         manager.delete(key=key)
     else:
-        print("Invalid command. Commands available: init, search <prefix>, edit <key>, get <key>, del <key>.")
+        print("Invalid command. Commands available: init, search <prefix>, open <key>, del <key>.")

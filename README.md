@@ -5,7 +5,6 @@
 ```bash
 yuriko init
 yuriko search <q prefix>
-yuriko edit <key>
-yuriko get <key>
+yuriko open <key>
 yuriko del <key>
 ```
