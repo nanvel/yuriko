@@ -3,6 +3,11 @@ yuriko
 
 Encrypted notes.
 
+DISCLAIMER:
+use it on your own risk,
+authors are not responsible for any vulnerability may lead to a leak of sensitive data or loss of data.
+Please make sure your password is strong enough.
+
 Setup
 -----
 
