@@ -8,7 +8,7 @@ from yuriko.manager import NotesManager
 
 
 def editor(initial):
-    with tempfile.NamedTemporaryFile(suffix='note') as tf:
+    with tempfile.NamedTemporaryFile() as tf:
         with open(tf.name, 'w') as f:
             f.write(initial)
         subprocess.call(['vim', tf.name])
