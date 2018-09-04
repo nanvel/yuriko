@@ -76,6 +76,7 @@ class NotesManager:
         self.save()
 
     def edit(self, key, value):
+        self.validate_key(key=key)
         assert key != self.KEYS_KEY
         assert key != self.TEST_KEY
         keys = set(self.decrypt(self.notes[self.KEYS_KEY], key=self.password).split(','))

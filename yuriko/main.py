@@ -20,6 +20,10 @@ def main():
     _, command, *arguments = sys.argv
 
     password = getpass.getpass('Password:')
+    password += settings.YURIKO_PASSWORD_SUFFIX
+    if len(password) < 16:
+        password = (password * 2)
+    password = password[:16]
 
     manager = NotesManager(path=settings.YURIKO_DB_PATH, password=password)
 
