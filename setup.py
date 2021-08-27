@@ -31,7 +31,7 @@ setup(
     url="https://github.com/nanvel/yuriko",
     packages=find_packages(),
     install_requires=[
-        'pycrypto'
+        'PyCryptodome'
     ],
     entry_points={
         'console_scripts': [
