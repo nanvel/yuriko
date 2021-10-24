@@ -38,3 +38,4 @@ Usage
     yuriko search <q prefix>
     yuriko open <key>
     yuriko del <key>
+    yuriko password <size>  # password generator

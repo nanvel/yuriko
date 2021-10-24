@@ -5,6 +5,7 @@ import tempfile
 
 from yuriko import settings
 from yuriko.manager import NotesManager
+from yuriko.password import gen_password
 
 
 def editor(initial):
@@ -18,6 +19,13 @@ def editor(initial):
 
 def main():
     _, command, *arguments = sys.argv
+
+    if command == 'password':
+        length = 12
+        if arguments:
+            length = int(arguments[0])
+        print(gen_password(length))
+        return
 
     password = getpass.getpass('Password:')
     password += settings.YURIKO_PASSWORD_SUFFIX
