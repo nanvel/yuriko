@@ -20,7 +20,7 @@ def read(file_name):
 
 setup(
     name="yuriko",
-    version='0.0.3',
+    version='0.0.4',
     description="Encrypted notes",
     long_description=read('README.rst'),
     license='The MIT License',
